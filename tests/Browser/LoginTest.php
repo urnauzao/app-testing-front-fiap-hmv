@@ -25,4 +25,12 @@ class LoginTest extends DuskTestCase
             ->assertSee('Digite um e-mail:');
         });
     }
+
+    public function testMobileAcesso(){
+        $this->browse(function (Browser $browser) {
+            $browser->visit($this->appRoute)
+            ->resize(390, 844)
+            ->assertSee('Connect HMV');
+        });
+    }
 }
